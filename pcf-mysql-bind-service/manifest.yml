@@ -1,9 +1,9 @@
 ---
 applications:
-- name: pcf-oracle-user-provided-service
+- name: pcf-mysql-bind-service
   memory: 1G
   instances: 1
-  path: target/pcf-oracle-user-provided-service-0.0.1-SNAPSHOT.jar
-  host: pcf-oracle-user-provided-service
+  path: target/pcf-mysql-bind-service1-0.0.1-SNAPSHOT.jar
+  host: pcf-mysql-bind-service
   services: 
-   - userprovideOronprimeSQLDB03
+   - mysqlfreespark

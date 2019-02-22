@@ -17,13 +17,15 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 
-	@RequestMapping("/customers")
+	@RequestMapping(value = "/customers", produces = { "application/json" }, method = RequestMethod.GET)
 	public List<Customer> getAllCustomer() {
+		System.out.println("CustomerController:getAllCustomer==>>listAll");
 		return customerService.listAll();
 	}
 
 	@RequestMapping(value = "/customers", produces = { "application/json" }, method = RequestMethod.POST)
 	public Customer savecustomer(@RequestBody Customer customer) {
+		System.out.println("CustomerController:savecustomer==>>saveOrUpdate");
 		return customerService.saveOrUpdate(customer);
 	}
 
