@@ -1,9 +1,7 @@
 ---
 applications:
-- name: pcf-mysql-bind-service
+- name: pcf-user-service
   memory: 1G
   instances: 1
-  path: target/pcf-mysql-bind-service1-0.0.1-SNAPSHOT.jar
-  host: pcf-mysql-bind-service
-  services: 
-   - mysqlfreespark
+  path: target/pcf-user-service-0.0.1-SNAPSHOT.jar
+  host: pcf-user-service 
