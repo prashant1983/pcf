@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: pcf-oracle-user-provided-service
+  datasource:
+    url: ${vcap.services.userprovideOronprimeSQLDB03.credentials.url}
+    username: ${vcap.services.userprovideOronprimeSQLDB03.credentials.username}
+    password: ${vcap.services.userprovideOronprimeSQLDB03.credentials.password}
+  jpa:
+    show-sql: true
+    hibernate: 
+      ddl-auto: update
