@@ -12,5 +12,5 @@ public interface CustomerService {
     Customer saveOrUpdate(Customer customr);
 
     void delete(String id);
-    
+ 
 }
